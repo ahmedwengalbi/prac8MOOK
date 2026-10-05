@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML-формы — ПР №8</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="page">
+  <h1>Регистрация</h1>
+
+  <form id="regForm" novalidate>
+    <!-- Имя -->
+    <div class="field">
+      <label for="name">Имя</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Введите имя"
+        required
+        minlength="2"
+        maxlength="30"
+        autocomplete="name">
+      <small class="error" data-for="name"></small>
+    </div>
+
+    <!-- Email -->
+    <div class="field">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        autocomplete="email">
+      <small class="error" data-for="email"></small>
+    </div>
+
+    <!-- Пароль -->
+    <div class="field">
+      <label for="password">Пароль</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Минимум 6 символов"
+        required
+        minlength="6"
+        autocomplete="new-password">
+      <small class="error" data-for="password"></small>
+    </div>
+
+    <!-- Возраст -->
+    <div class="field">
+      <label for="age">Возраст</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        placeholder="От 18 до 99"
+        required
+        min="18"
+        max="99">
+      <small class="error" data-for="age"></small>
+    </div>
+
+    <!-- Город -->
+    <div class="field">
+      <label for="city">Город</label>
+      <select id="city" name="city" required>
+        <option value="">— Выберите город —</option>
+        <option value="almaty">Алматы</option>
+        <option value="astana">Астана</option>
+        <option value="shymkent">Шымкент</option>
+        <option value="karaganda">Караганда</option>
+      </select>
+      <small class="error" data-for="city"></small>
+    </div>
+
+    <!-- Комментарий -->
+    <div class="field">
+      <label for="comment">Комментарий</label>
+      <textarea
+        id="comment"
+        name="comment"
+        rows="4"
+        maxlength="200"
+        placeholder="Необязательно, до 200 символов"></textarea>
+    </div>
+
+    <!-- Согласие -->
+    <div class="field checkbox">
+      <label>
+        <input type="checkbox" id="agree" name="agree" required>
+        Я согласен с условиями
+      </label>
+      <small class="error" data-for="agree"></small>
+    </div>
+
+    <button type="submit">Отправить</button>
+    <p id="result" class="result" role="status"></p>
+  </form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
