@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  background: #eef2f7;
+  color: #1f2933;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.page {
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  text-align: center;
+  color: #365a80;
+  margin-bottom: 1.25rem;
+  font-size: 1.6rem;
+}
+
+form {
+  background: #fff;
+  padding: 1.75rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #365a80;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fbfdff;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4a76a8;
+  box-shadow: 0 0 0 3px rgba(74, 118, 168, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #1f2933;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  width: auto;
+  accent-color: #4a76a8;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #4a76a8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background: #365a80;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Ошибки */
+.error {
+  display: block;
+  color: #d7263d;
+  font-size: 0.82rem;
+  margin-top: 0.25rem;
+  min-height: 1em;
+}
+
+input.invalid,
+textarea.invalid,
+select.invalid {
+  border-color: #d7263d;
+  background: #fff5f6;
+}
+
+/* Успех */
+.result {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #2f9e44;
+}
